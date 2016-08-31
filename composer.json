@@ -1,0 +1,24 @@
+{
+    "name": "daria7213/todo-list",
+    "type": "project",
+    "authors": [
+        {
+            "name": "daria7213",
+            "email": "irvill12@gmail.com"
+        }
+    ],
+    "require-dev": {
+
+    },
+    "require": {
+        "silex/silex": "~2.0",
+        "twig/twig": "^1.24",
+        "symfony/twig-bridge": "^3.1",
+        "doctrine/dbal": "^2.5",
+        "symfony/config": "^3.1",
+        "symfony/var-dumper": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+}

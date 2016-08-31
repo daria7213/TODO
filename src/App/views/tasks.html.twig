@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Tasks
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css">
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script type="text/javascript" src="dist/js/tasks.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="tasks">
+    <h4>Добавить задание:</h4>
+    <div class="input-group new-task">
+        <input type="text" class="task-description form-control" title="New task" aria-label="Task" placeholder="Задание">
+        <div class="input-group-btn">
+            <button class="task-add btn" type="button">
+                <span class='fa fa-plus' role='img' aria-label='Add'></span>
+            </button>
+        </div>
+    </div>
+    <div class="task-list">
+        <div class="undone-tasks col-md-6">
+            <h4>Невыполненные задания</h4>
+            {% for task in undoneTasks %}
+                <div class="task-item" id="{{ task.getId() }}">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <label class="task-checkbox">
+                                <input class="task-status" type="checkbox" title = "Status" aria-label="Status" {% if task.getStatus() == "DONE" %} checked {% endif %}>
+                                <span class="indicator fa fa-check" role='img' aria-label="Important"></span>
+                            </label>
+                        </span>
+                        <input type="text" class="task-description form-control" title="Task" aria-label="Task" value="{{ task.getDescription() }}">
+                        <div class="input-group-btn">
+                            <button class="task-delete btn " type="button">
+                                <span class='fa fa-times' role='img' aria-label='Delete'></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="done-tasks col-md-6">
+            <h4>Выполненные задания</h4>
+            {% for task in doneTasks %}
+                <div class="task-item" id="{{ task.getId() }}">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <label class="task-checkbox">
+                                <input class="task-status" type="checkbox" title = "Status" aria-label="Status" {% if task.getStatus() == "DONE" %} checked {% endif %}>
+                                <span class="indicator fa fa-check" role='img' aria-label="Important"></span>
+                            </label>
+                        </span>
+                        <input type="text" class="task-description form-control" title="Task" aria-label="Task" value="{{ task.getDescription() }}">
+                        <div class="input-group-btn">
+                            <button class="task-delete btn " type="button">
+                                <span class='fa fa-times' role='img' aria-label='Delete'></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}
