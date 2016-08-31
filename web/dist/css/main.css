@@ -6296,15 +6296,6 @@ button.btn {
   .help-block .fa {
     font-size: 1.25em; }
 
-#main-nav .nav li a {
-  color: #615b58; }
-
-#main-nav .nav li.active a, #main-nav .nav li:hover a {
-  background: transparent;
-  color: #d2603d;
-  box-shadow: none;
-  -webkit-box-shadow: none; }
-
 .tasks {
   margin-top: 40px; }
   .tasks input[type=text] {
