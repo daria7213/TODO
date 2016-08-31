@@ -72,7 +72,7 @@ $(function(){
                             '<label class="task-checkbox">'+
                             '<input class="task-status" type="checkbox" title = "Status" aria-label="Status"' + (taskData.status === true ? "checked": "") + '>'+
                             '<span class="indicator fa fa-check" role="img" aria-label="Important"></span></label></span>'+
-                            '<input type="text" class="task-description form-control" title="Task" aria-label="Task" value='+ taskData.description +'>'+
+                            '<input type="text" class="task-description form-control" title="Task" aria-label="Task" value="'+ taskData.description +'">'+
                             '<div class="input-group-btn">'+
                             '<button class="task-delete btn " type="button">'+
                             '<span class="fa fa-times" role="img" aria-label="Delete"></span></button></div></div></div>';

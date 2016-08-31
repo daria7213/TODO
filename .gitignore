@@ -2,3 +2,4 @@ vendor/
 node_modules/
 .idea/
 web/app.sqlite3
+src/App/app.sqlite3
