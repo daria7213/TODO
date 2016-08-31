@@ -1,7 +1,7 @@
 <?php
 
-$app->get('/tasks', 'controller.task:showAction')->bind('tasks');
-$app->post('/tasks', 'controller.task:newAction')->bind('new_task');
-$app->delete('/tasks', 'controller.task:deleteAction')->bind('delete_task');
-$app->put('/tasks', 'controller.task:updateAction')->bind('update_task');
+$app->get('/', 'controller.task:showAction')->bind('tasks');
+$app->post('/', 'controller.task:newAction')->bind('new_task');
+$app->delete('/', 'controller.task:deleteAction')->bind('delete_task');
+$app->put('/', 'controller.task:updateAction')->bind('update_task');
 

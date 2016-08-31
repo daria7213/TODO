@@ -24,7 +24,7 @@ $(function(){
         addTask: function(){
             $.ajax({
                 type: 'POST',
-                url: 'tasks',
+                url: '/',
                 dataType: 'json',
                 data: {
                     description: $('.new-task .task-description').val(),
@@ -37,7 +37,7 @@ $(function(){
         },
         deleteTask: function(task) {
             $.ajax({
-                url: 'tasks',
+                url: '/',
                 type:'DELETE',
                 dataType: 'text',
                 data: {
@@ -52,7 +52,7 @@ $(function(){
         updateTask: function(task){
             $.ajax({
                 type: 'PUT',
-                url: 'tasks',
+                url: '/',
                 data: {
                     id: task.attr('id'),
                     status: task.find('.task-status').prop('checked'),
