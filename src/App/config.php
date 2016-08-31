@@ -47,12 +47,12 @@ if (!$schema->tablesExist('task')) {
     $schema->createTable($tasks);
 
     $app['db']->insert('task', array(
-        'description' => 'выполненно',
+        'description' => 'выполнено',
         'status' => 'DONE',
     ));
 
     $app['db']->insert('task', array(
-        'description' => 'невыполненно',
+        'description' => 'невыполнено',
         'status' => 'UNDONE',
     ));
 }
